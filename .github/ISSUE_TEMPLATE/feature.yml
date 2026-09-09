@@ -1,0 +1,21 @@
+name: Feature request
+description: Propose a concrete Android/authentik workflow
+title: "feat: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the real workflow/problem, not only the desired UI.
+    validations:
+      required: true
+  - type: textarea
+    id: mobile
+    attributes:
+      label: Why this belongs on Android
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Relevant authentik API/docs link

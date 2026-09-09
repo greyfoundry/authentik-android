@@ -1,0 +1,70 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace = "dev.greyfoundry.authentik"
+    compileSdk = 37
+
+    defaultConfig {
+        applicationId = "dev.greyfoundry.authentik"
+        minSdk = 28
+        targetSdk = 37
+        versionCode = 1
+        versionName = "0.1.0-dev"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    // F-Droid rejects the dependency metadata signing block added by AGP.
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
+    packaging {
+        // Symbol stripping of prebuilt native libraries can vary across build hosts.
+        jniLibs.keepDebugSymbols += "**/*.so"
+        resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+    }
+}
+
+dependencies {
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+
+    debugImplementation(libs.androidx.compose.ui.tooling)
+
+    testImplementation(libs.junit4)
+}

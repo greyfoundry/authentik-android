@@ -1,0 +1,96 @@
+# UI and UX System
+
+## Design language
+
+Use Material 3 as the interaction foundation while retaining a restrained authentik-compatible visual identity. Do not clone the upstream web UI pixel-for-pixel.
+
+## Navigation
+
+Phone:
+
+- Home
+- Directory
+- Access
+- Activity
+- More
+
+Large screens/foldables:
+
+- navigation rail or drawer as appropriate;
+- list-detail scene strategies for resource collections;
+- supporting panes for editors/inspectors;
+- no duplicated tablet-only screen implementations.
+
+## Density
+
+Identity administration needs useful information density, but minimum touch targets and font scaling remain non-negotiable.
+
+Prefer:
+
+- compact `ListItem` patterns;
+- persistent search/filter controls on large collections;
+- secondary metadata in subdued typography;
+- clear status chips/icons with text equivalents;
+- progressive disclosure for rarely used fields.
+
+## Home
+
+Home prioritizes:
+
+1. instance health/version state;
+2. security events;
+3. session/user summaries;
+4. outpost warnings;
+5. recent administrative activity.
+
+No welcome hero, marketing carousel, or ornamental dashboard cards that hide operational information.
+
+## Resource detail pattern
+
+Use consistent tabs/sections where applicable:
+
+- Overview
+- Relationships
+- Activity
+- Access/Permissions
+- Advanced
+
+Only show sections that make sense for that resource.
+
+## Forms
+
+- preserve unsaved state through rotation/process recreation where practical;
+- validate locally when rules are known;
+- preserve server validation errors verbatim enough to be actionable;
+- distinguish required, optional, secret, and inherited values;
+- reveal advanced fields progressively;
+- never prefill a secret field with a server-returned placeholder and then accidentally overwrite it.
+
+## Destructive flows
+
+Do not use tiny overflow actions for dangerous operations. Show effect, target, and uncertainty clearly.
+
+## Errors
+
+Translate low-level failures into actionable messages:
+
+- cannot reach instance;
+- certificate not trusted;
+- sign-in expired;
+- permission denied;
+- resource changed/conflict;
+- unsupported server capability;
+- unknown result after network interruption.
+
+Always preserve a redacted technical-detail path for debugging.
+
+## Motion
+
+Use platform-consistent navigation and state transitions. Avoid ornamental motion on high-frequency admin workflows.
+
+## Theming
+
+- system/light/dark;
+- dynamic color optional;
+- semantic severity colors controlled by the app so warning/error meaning remains consistent;
+- do not encode status solely by color.
