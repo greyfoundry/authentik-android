@@ -27,6 +27,14 @@ A good PR:
 - Keep generated API files out of manual review except when regeneration is the purpose of the change.
 - Use ASCII punctuation in tracked files. In particular, use a plain hyphen instead of en or em dashes.
 
+## Documentation style
+
+- Lead with what a change means for users, then explain the implementation.
+- Write plainly enough for someone who runs authentik but does not write Android code.
+- Keep technical documents concrete: name the data flow, owning layer, current status, and important failure cases.
+- Separate shipped behavior from plans, and do not describe unfinished work as available.
+- Use maintainer-to-maintainer language. Avoid internal workflow commentary and unexplained jargon.
+
 ## Security-sensitive changes
 
 Changes involving OAuth, token storage, TLS, biometrics, provider secrets, destructive actions, custom CAs, mTLS, backup/restore, or deep links require explicit security review against `docs/SECURITY_MODEL.md`.

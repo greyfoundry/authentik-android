@@ -1,113 +1,123 @@
 # authentik Companion for Android
 
-> Unofficial, open-source Android companion for [authentik](https://goauthentik.io/), built by Greyfoundry.
+[![Build](https://github.com/greyfoundry/authentik-android/actions/workflows/build.yml/badge.svg)](https://github.com/greyfoundry/authentik-android/actions/workflows/build.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+![Platform: Android 9+](https://img.shields.io/badge/Android-9%2B-3DDC84?logo=android&logoColor=white)
+![Built with Kotlin and Compose](https://img.shields.io/badge/Kotlin-Compose-7F52FF?logo=kotlin&logoColor=white)
 
-`authentik Companion` is a native Android client for operating, administering, and eventually authenticating against self-hosted authentik instances. The project is intentionally Android-first and self-hosted-first. It does not require a Greyfoundry backend, Firebase, or Google Play Services for core operation.
+**A native Android companion for your self-hosted
+[authentik](https://goauthentik.io/) instance.** The app is being built for jobs
+that are awkward from a phone browser: checking security events, reviewing
+sessions, responding to account problems, and managing identity infrastructure
+when a laptop is not nearby.
+
+It connects directly to authentik. Core operation will not require a Greyfoundry
+service, Firebase, Google Play Services, or a hosted relay.
+
+> [!IMPORTANT]
+> This project is in early development. The foundation builds and its first
+> stable domain contracts are tested, but there is not yet a release for
+> everyday use.
 
 ## Why this exists
 
-authentik is powerful, but its Admin interface remains primarily desktop-oriented. A phone is a good place for fast operational workflows: inspect security events, review sessions, disable a compromised account, terminate sessions, check outposts, review access requests, and manage identity infrastructure when a laptop is not available.
+authentik's web interface is powerful and remains the right place for many large
+configuration jobs. A native Android app can make smaller, time-sensitive
+workflows much better: show the right information at phone and tablet sizes,
+keep authentication in the system browser, use Android's security APIs, and put
+risky actions behind clear confirmation and authorization.
 
-The long-term goal is broader than a dashboard. One Android app should eventually cover three related surfaces:
+The goal is one app with three related areas:
 
-1. **Admin** - native authentik administration and incident response.
-2. **User** - application launcher, account settings, sessions, credentials, and self-service.
-3. **Authenticator** - device enrollment and, if upstream capabilities permit, native approval flows.
+- **Admin** for operations, directory management, access configuration, and incident response.
+- **User** for application launch, account settings, sessions, credentials, and self-service.
+- **Authenticator** for device enrollment and native approval flows where
+  authentik provides a safe integration contract.
 
-The app complements authentik. It does not blindly reproduce the web Admin interface screen-for-screen.
+This is a companion, not a screen-for-screen copy of authentik's Admin interface.
 
-## Core principles
+## What matters here
 
-- **Self-hosted-first.** The app talks directly to the user's authentik instance.
-- **No required cloud relay.** A server-side companion may exist later only for features that genuinely require one, such as push delivery.
-- **Stable behavior across schema evolution.** Generated transport may change with authentik's OpenAPI schema, but compatibility adapters absorb that churn before it reaches handwritten domain models, repositories, or UI.
-- **Permission-aware.** Feature visibility and actions depend on server version, capabilities, and the current user's permissions.
-- **Read broadly, write deliberately.** Administrative writes are risk-classified and protected according to impact.
-- **Online-first.** Cached reads are allowed; administrative writes are never queued for later execution.
-- **Android-native.** Compose, Material 3, adaptive layouts, predictive back, accessibility, biometrics, App Links, and platform security APIs are first-class.
-- **KISS/YAGNI.** Future-proof boundaries, not speculative abstractions.
+- **Self-hosted first.** The app talks to the user's own authentik instance.
+- **Stable across authentik upgrades.** Generated API code can change with the
+  upstream schema; app-owned adapters absorb that churn before it reaches
+  repositories or screens.
+- **Permission aware.** The server version, capabilities, and current user's
+  permissions decide which features appear.
+- **Careful with writes.** Administrative actions are classified by risk.
+  Destructive and credential-related actions receive stronger protection.
+- **Android native.** Jetpack Compose, Material 3, adaptive layouts,
+  accessibility, App Links, biometrics, and the Android Keystore are first-class
+  parts of the product.
+- **Private by design.** Passwords are never collected or stored. Credentials
+  must stay out of Room, logs, analytics, screenshots, and support bundles.
 
-## Technology baseline
+## Project status
 
-The baseline selected on 2026-09-08 is:
+Foundation work is underway:
 
-- Kotlin 2.4.20
-- Android Gradle Plugin 9.4.0
-- Gradle 9.6.0
-- JDK 17
-- compileSdk 37 / targetSdk 37
-- minSdk 28
-- Compose BOM 2026.08.00 (maps core Compose to 1.12.0 and Material 3 to 1.4.0)
-- Jetpack Compose UI 1.12.0
-- Material 3 1.4.0
-- Material 3 Adaptive 1.3.0
-- Navigation 3 1.1.7 stable
-- Retrofit 3.0.0 with OkHttp 4.12.x-compatible transport
-- kotlinx.serialization
-- AppAuth-Android 0.11.1
-- DataStore
-- Android Keystore + AES-GCM
-- BiometricPrompt
-- Room only when persistent offline-readable data has a concrete use
-- WorkManager only when background work has a concrete use
-- Manual dependency injection initially
+- the Android and generated-transport modules build on API 28 and later;
+- pull requests run unit tests, lint, debug assembly, and an unsigned
+  F-Droid-compatible release build;
+- instance identities and HTTPS base URL handling have stable, tested domain contracts;
+- the authentik schema boundary, OIDC sign-in, encrypted credential storage,
+  adaptive app shell, and first Users/Events read paths are next.
 
-All dependency versions must live in `gradle/libs.versions.toml` once implementation begins. Dynamic versions are forbidden.
+The full delivery order is in [ROADMAP.md](ROADMAP.md). Completed behavior will
+be recorded in [CHANGELOG.md](CHANGELOG.md).
 
-## Repository shape
+## For developers
 
-The intended initial code shape is deliberately small:
+The project uses Kotlin, Jetpack Compose, Material 3, Material 3 Adaptive, and
+Navigation 3. authentik's OpenAPI schema generates a Retrofit transport module,
+but generated DTOs and endpoint names stop at the compatibility boundary:
 
 ```text
-app/
-  src/main/kotlin/dev/greyfoundry/authentik/
-    app/
-    auth/
-    compat/
-    data/
-    domain/
-    network/
-    security/
-    ui/
-api-generated/
-  # generated OpenAPI Retrofit transport only; never hand-edit
-build-logic/          # add only if repeated build configuration actually appears
-
-docs/
-  adr/
-  implementation/
+authentik schema
+      -> generated client
+      -> compatibility adapter
+      -> stable app models
+      -> repositories
+      -> Compose UI
 ```
 
-Do not split features into separate Gradle modules until there is demonstrated build-time, ownership, or dependency-boundary value.
+That boundary is a release invariant. An additive schema change can regenerate
+transport code without changing existing screen behavior. A real upstream
+behavior difference gets a focused compatibility adapter and contract tests.
 
-## First implementation sequence
+Build the current project with:
 
-1. Scaffold project and CI.
-2. Establish generated OpenAPI transport and compatibility gateway.
-3. Implement instance profiles and capability/version detection.
-4. Implement OIDC Authorization Code + PKCE using AppAuth.
-5. Add Keystore-backed credential storage and optional biometric app lock.
-6. Implement Home, Activity, Users, Sessions, Applications, and Outposts as read paths.
-7. Add risk-classified actions: terminate session, enable/disable user.
-8. Expand into Directory, RBAC, providers/sources, flows/policies, blueprints, infrastructure, and self-service.
+```bash
+./gradlew :api-generated:compileKotlin :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleRelease
+```
 
-See [`ROADMAP.md`](ROADMAP.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), and [`docs/implementation/00-foundation.md`](docs/implementation/00-foundation.md).
+Dependency versions are pinned in `gradle/libs.versions.toml`. See
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md),
+[docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md), and
+[docs/API_COMPATIBILITY.md](docs/API_COMPATIBILITY.md) before changing an
+integration boundary.
 
-## Non-goals
+## Distribution
 
-- Reimplementing authentik's backend.
-- Shipping a mandatory Greyfoundry SaaS.
-- Using a WebView for authentik login.
-- Storing authentik passwords.
-- Providing an "ignore TLS errors" switch.
-- Queuing administrative writes offline.
-- Creating a plugin system before a real extension use case exists.
-- Supporting iOS or Kotlin Multiplatform merely because they exist.
+GitHub Releases, F-Droid, and Obtainium-friendly artifacts are planned. Release
+builds will include checksums, an SBOM, provenance, and a compatibility summary.
+Signing credentials will remain outside the repository.
 
-## License
+There is no APK to install yet. Releases will appear on the repository's
+[Releases page](https://github.com/greyfoundry/authentik-android/releases) when
+the first usable slice is ready.
 
-Apache License 2.0. See [`LICENSE`](LICENSE).
+## Contributing
 
-## Trademark and affiliation
+Issues and pull requests are welcome. Start with
+[CONTRIBUTING.md](CONTRIBUTING.md) and the relevant architecture decision in
+[docs/adr/](docs/adr/). Security-sensitive reports belong in the private channel
+described by [SECURITY.md](SECURITY.md).
 
-This project is not affiliated with or endorsed by Authentik Security, Inc. `authentik` is the upstream product name and is always written lowercase. The repository name is descriptive so users can find the project; branding should remain clearly unofficial.
+## License and affiliation
+
+Licensed under the [Apache License 2.0](LICENSE).
+
+This project is built by Greyfoundry and is not affiliated with or endorsed by
+Authentik Security, Inc. `authentik` is the upstream product name and is always
+written lowercase.
