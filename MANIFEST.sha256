@@ -10,11 +10,14 @@ f0ed5cfc3c5d3ee936f9cc9f735e598186a1328dde9a768c5e1c877d69f2738d  ./.github/work
 3bbb8a56572ebdc270057b51ce27931c5fc79e09761f9c26715682946ed26774  ./app/proguard-rules.pro
 3ed0c2fe8269f36e22e9b940c0a02621d0ab1a0c5a5bd0897d0ec4bab7200faf  ./app/src/main/AndroidManifest.xml
 15ace0971c8254108500715a0f0e9f0c2a400f9ff1fe186fc1e141c6c524d807  ./app/src/main/kotlin/dev/greyfoundry/authentik/MainActivity.kt
+111eacb2b96adaa1ac474c64913692d0628ea0c70d1197f17f438b61742d4d61  ./app/src/main/kotlin/dev/greyfoundry/authentik/domain/model/Instance.kt
+0d7fa9c3fad1d38557039effaade567c4b5bf484fc71b5d8b762d7f47f749716  ./app/src/main/kotlin/dev/greyfoundry/authentik/domain/model/ServerProfile.kt
 9d5554b79c3c43c562bc2f2b0f6effaaa096d837252adb27dbe33ea179537e9b  ./app/src/main/res/values/strings.xml
 570838c7ad41859414d3289802ffe12a5b76ef44fa7db18d2af23f17b5505aa5  ./app/src/main/res/values/themes.xml
 7761911cf96779d583a975491f0bf7e63267549e45c861d8a3af116139b9b9b1  ./app/src/test/kotlin/dev/greyfoundry/authentik/BuildSmokeTest.kt
+f0bbe132613a66896abc0a4ea9acc288a6ec4476d14079064b38c7b625147e09  ./app/src/test/kotlin/dev/greyfoundry/authentik/domain/model/InstanceTest.kt
 13bf8f5288aefc1f04d42690f44136743c458eb73c9f333610104a16c24d5b3f  ./build.gradle.kts
-79247821c6a2ad2fe31d39a382f78d6ee8897ee0995463b42beee862b2c817d0  ./CHANGELOG.md
+99c81dc994529a78cc587025112ce39b4c42d0d5229bcd732d5898753ad0f1d8  ./CHANGELOG.md
 6980c6a8bacb4910767edcbba0fcc38abd1ec5c82f0108aa806fe65359f2ee0c  ./CODE_OF_CONDUCT.md
 f38544de9b5f043954b3cf22df5e7cee0134d498218c662331c0e46aa9a4b3ac  ./CONTRIBUTING.md
 c6c2b839ecf1d435e2f9ab74d54b61b522373b343f98af994fe27a1a67a653e0  ./docs/ACCESSIBILITY.md
