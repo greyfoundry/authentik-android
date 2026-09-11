@@ -59,7 +59,8 @@ Foundation work is underway:
 - the Android and generated-transport modules build on API 28 and later;
 - pull requests run unit tests, lint, debug assembly, and an unsigned
   F-Droid-compatible release build;
-- instance identities and HTTPS base URL handling have stable, tested domain contracts;
+- instance identities, HTTPS base URL handling, and non-secret instance metadata
+  persistence have stable, tested contracts;
 - the pinned authentik 2026.8.1 schema now generates a reproducible Retrofit
   transport behind an enforced app-owned compatibility boundary;
 - server profiling maps version, edition, and capability data into stable app
