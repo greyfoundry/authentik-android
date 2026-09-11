@@ -62,6 +62,8 @@ Foundation work is underway:
 - instance identities and HTTPS base URL handling have stable, tested domain contracts;
 - the pinned authentik 2026.8.1 schema now generates a reproducible Retrofit
   transport behind an enforced app-owned compatibility boundary;
+- server profiling maps version, edition, and capability data into stable app
+  models while tolerating additive upstream fields and capability values;
 - OIDC sign-in, encrypted credential storage, adaptive app shell, and first
   Users/Events read paths are next.
 

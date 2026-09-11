@@ -175,6 +175,12 @@ ServerProfile
 
 The app derives feature availability from **version + capabilities + permissions**, not version alone.
 
+`DefaultAuthentikGateway` reads the version and public configuration endpoints
+through a project-owned Retrofit client. The client uses finite timeouts,
+disables automatic redirects and connection retries, and tolerates unknown JSON
+fields. HTTP, TLS, network, and decoding failures become stable domain failures
+before reaching repositories or UI.
+
 ## Generated API
 
 The generator is a build tool, not an application dependency. OpenAPI Generator

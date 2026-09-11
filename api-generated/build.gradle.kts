@@ -56,6 +56,9 @@ openApiGenerate {
     importMappings.set(
         mapOf("JsonElement" to "kotlinx.serialization.json.JsonElement"),
     )
+    schemaMappings.set(
+        mapOf("CapabilitiesEnum" to "kotlin.String"),
+    )
 }
 
 tasks.register<Sync>("generateAuthentikApi") {
