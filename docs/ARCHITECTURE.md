@@ -177,7 +177,14 @@ The app derives feature availability from **version + capabilities + permissions
 
 ## Generated API
 
-The generator is a build tool, not an application dependency. Use OpenAPI Generator 7.24.0 initially with Kotlin `jvm-retrofit2`, `serializationLibrary=kotlinx_serialization`, coroutine support, and generated response wrappers where needed. Generated Retrofit 2.x-shaped code runs against project-pinned Retrofit 3.0.0 because Retrofit 3 preserves forward binary compatibility with 2.x. The project supplies/configures the OkHttp client rather than accepting generator defaults as architectural policy.
+The generator is a build tool, not an application dependency. OpenAPI Generator
+7.25.0 uses Kotlin `jvm-retrofit2`, `serializationLibrary=kotlinx_serialization`,
+coroutine support, and generated response wrappers. Generated Retrofit
+2.x-shaped code runs against project-pinned Retrofit 3.0.0 because Retrofit 3
+preserves forward binary compatibility with 2.x. The project supplies OkHttp
+5.5.0 and omits the generator-owned `ApiClient` and authentication helpers so
+authorization, redirects, TLS, logging, and credential redaction stay under
+project control.
 
 Rules:
 

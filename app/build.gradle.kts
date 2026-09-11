@@ -58,6 +58,7 @@ kotlin {
 }
 
 dependencies {
+    implementation(project(":api-generated"))
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.ui)

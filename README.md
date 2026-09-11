@@ -60,8 +60,10 @@ Foundation work is underway:
 - pull requests run unit tests, lint, debug assembly, and an unsigned
   F-Droid-compatible release build;
 - instance identities and HTTPS base URL handling have stable, tested domain contracts;
-- the authentik schema boundary, OIDC sign-in, encrypted credential storage,
-  adaptive app shell, and first Users/Events read paths are next.
+- the pinned authentik 2026.8.1 schema now generates a reproducible Retrofit
+  transport behind an enforced app-owned compatibility boundary;
+- OIDC sign-in, encrypted credential storage, adaptive app shell, and first
+  Users/Events read paths are next.
 
 The full delivery order is in [ROADMAP.md](ROADMAP.md). Completed behavior will
 be recorded in [CHANGELOG.md](CHANGELOG.md).

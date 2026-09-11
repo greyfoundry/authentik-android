@@ -44,5 +44,10 @@ jobs:
       - name: Verify action pins
         run: python3 scripts/check_action_pins.py
 
+      - name: Verify generated transport
+        run: |
+          ./tools/openapi/generate.sh current
+          git diff --exit-code -- api-generated/src/main/kotlin
+
       - name: Build, test, and lint
         run: ./gradlew :api-generated:compileKotlin :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleRelease --no-daemon --stacktrace
