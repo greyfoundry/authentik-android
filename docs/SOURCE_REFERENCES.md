@@ -1,6 +1,6 @@
 # Source References
 
-Research snapshot: 2026-09-08.
+Research snapshot: 2026-09-11.
 
 ## authentik
 
@@ -17,6 +17,7 @@ Research snapshot: 2026-09-08.
 - Outposts: https://docs.goauthentik.io/add-secure-apps/outposts
 - 2026.5 release notes: https://docs.goauthentik.io/releases/2026.5/
 - 2026.8 release notes: https://docs.goauthentik.io/releases/2026.8/
+- 2026.8.1 source tag: https://github.com/goauthentik/authentik/releases/tag/version%2F2026.8.1
 
 ## Android
 
@@ -34,6 +35,8 @@ Research snapshot: 2026-09-08.
 - Retrofit releases: https://github.com/square/retrofit/releases
 - OpenAPI Generator Kotlin client: https://openapi-generator.tech/docs/generators/kotlin/
 - OpenAPI Generator releases: https://github.com/OpenAPITools/openapi-generator/releases
+- OpenAPI Generator 7.25.0: https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0
+- OpenAPI Generator issue 22049: https://github.com/OpenAPITools/openapi-generator/issues/22049
 - AppAuth-Android: https://github.com/openid/AppAuth-Android
 - AppAuth Maven Central: https://central.sonatype.com/artifact/net.openid/appauth
 

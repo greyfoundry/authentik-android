@@ -43,14 +43,21 @@ Feature gating may still allow safe read-only functionality on unknown versions.
 
 ## Schema workflow
 
-CI jobs should:
+The shipping transport is generated from the checksum-pinned authentik 2026.8.1
+schema. A separate pinned 2026.11.0-rc1 snapshot exercises the same generated
+module and stable app contracts in scheduled compatibility CI. The upcoming
+snapshot is an early warning input, not a supported release or shipping source.
+
+CI jobs:
 
 1. fetch/pin the latest stable upstream schema;
 2. generate transport code with a pinned generator;
 3. run formatter and compile tests;
-4. run OpenAPI breaking-change diff against the currently pinned schema;
-5. run contract tests against supported authentik containers;
-6. produce a human-readable compatibility report.
+4. run OpenAPI breaking-change diff against the currently pinned schema when the
+   schema is updated;
+5. run contract tests against supported authentik containers as those fixtures
+   become available;
+6. produce a human-readable compatibility report for releases;
 7. fetch and regenerate from the upcoming authentik schema on a non-release-blocking scheduled lane until that release becomes supported;
 8. run stable-contract tests that prove existing domain models, errors, feature gates, and repository behavior do not change because generated symbols changed.
 

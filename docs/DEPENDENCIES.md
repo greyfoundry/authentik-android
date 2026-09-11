@@ -1,6 +1,6 @@
 # Dependency Baseline
 
-Snapshot date: 2026-09-08.
+Snapshot date: 2026-09-11.
 
 These are the selected stable baselines for initial implementation, subject to compatibility verification during scaffold creation.
 
@@ -19,8 +19,9 @@ These are the selected stable baselines for initial implementation, subject to c
 | Material 3 Adaptive | 1.3.0 |
 | Navigation 3 | 1.1.7 stable |
 | Retrofit | 3.0.0 |
-| OkHttp | 4.12.x-compatible baseline; pin exact project version after generator smoke test |
-| OpenAPI Generator | 7.24.0 |
+| OkHttp | 5.5.0 |
+| kotlinx.serialization JSON | 1.11.0 |
+| OpenAPI Generator | 7.25.0 |
 | AppAuth-Android | 0.11.1 |
 
 Additional AndroidX dependencies such as Lifecycle, DataStore, Biometric, Paging, and Room must use the latest compatible stable release at implementation time and be pinned in `libs.versions.toml`.

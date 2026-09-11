@@ -9,7 +9,10 @@ OpenAPI Generator has a stable Kotlin Retrofit client path with coroutine and ko
 
 ## Decision
 
-Generate Retrofit service/client transport from OpenAPI using the Kotlin `jvm-retrofit2` template, `kotlinx_serialization`, coroutines, and a project-supplied OkHttp client. Pin OpenAPI Generator 7.24.0 and Retrofit 3.0.0 at the application level.
+Generate Retrofit service/client transport from OpenAPI using the Kotlin
+`jvm-retrofit2` template, `kotlinx_serialization`, coroutines, and a
+project-supplied OkHttp client. Pin OpenAPI Generator 7.25.0, Retrofit 3.0.0,
+and OkHttp 5.5.0 at the application level.
 
 ## Consequences
 
