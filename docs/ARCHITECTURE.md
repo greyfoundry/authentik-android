@@ -131,6 +131,12 @@ interface AuthentikGateway {
 }
 ```
 
+`DataStoreInstanceRepository` persists only instance identifiers, normalized
+base URLs, display names, and the active instance identifier. Its edits are
+atomic, preserve insertion order, and clear active selection when that profile
+is removed. OAuth state, access tokens, refresh tokens, passwords, and other
+credentials are not part of this storage contract.
+
 Do not force every future endpoint into one god-interface. Split `AuthentikGateway` by coherent resource groups once implementation size demands it, while keeping the compatibility layer as the only consumer of generated transport.
 
 ## Stable internal contracts

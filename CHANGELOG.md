@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added stable instance identity, secure base URL normalization, and server-profile domain contracts.
+- Added DataStore persistence for instance profiles and active instance selection.
 - Established stable compatibility contracts between generated authentik transport and user-facing behavior.
 - Generated the Retrofit transport from a checksum-pinned authentik 2026.8.1 schema.
 - Added scheduled generation and stable-contract checks for the reviewed upcoming authentik schema.

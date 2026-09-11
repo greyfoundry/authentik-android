@@ -18,6 +18,7 @@ These are the selected stable baselines for initial implementation, subject to c
 | Material 3 | 1.4.0 |
 | Material 3 Adaptive | 1.3.0 |
 | Navigation 3 | 1.1.7 stable |
+| AndroidX DataStore | 1.2.1 |
 | Retrofit | 3.0.0 |
 | OkHttp | 5.5.0 |
 | MockWebServer | 5.5.0, tests only |
