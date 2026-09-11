@@ -23,7 +23,6 @@
 
 package dev.greyfoundry.authentik.generated.model
 
-import dev.greyfoundry.authentik.generated.model.CapabilitiesEnum
 import dev.greyfoundry.authentik.generated.model.ErrorReportingConfig
 
 import kotlinx.serialization.Serializable
@@ -47,7 +46,7 @@ data class Config (
     val errorReporting: ErrorReportingConfig,
 
     @SerialName(value = "capabilities")
-    val capabilities: kotlin.collections.List<@Contextual CapabilitiesEnum>,
+    val capabilities: kotlin.collections.List<kotlin.String>,
 
     @SerialName(value = "cache_timeout")
     val cacheTimeout: kotlin.Int,

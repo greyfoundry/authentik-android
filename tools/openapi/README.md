@@ -54,6 +54,10 @@ OpenAPI free-form object values map to `JsonElement`. This keeps unknown JSON
 data readable without exposing untyped generated values across the compatibility
 boundary.
 
+The root configuration `CapabilitiesEnum` schema maps to `String`. Capability
+names are an extensible server feature set, so the compatibility layer must be
+able to preserve an unknown future value instead of failing JSON decoding.
+
 OpenAPI Generator 7.25.0 can emit an extra invocation after some generated
 `HashMap` constructors. The sync task applies one narrow, deterministic
 replacement for that known generator defect. Remove the workaround after

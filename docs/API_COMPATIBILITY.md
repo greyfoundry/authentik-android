@@ -35,9 +35,9 @@ Support expands only when automated contract coverage proves it.
 A server outside the tested range is not automatically blocked. It receives one of:
 
 - `SUPPORTED`
-- `COMPATIBLE_UNVERIFIED`
-- `LIMITED`
+- `DEGRADED`
 - `UNSUPPORTED`
+- `UNKNOWN`
 
 Feature gating may still allow safe read-only functionality on unknown versions.
 
@@ -97,6 +97,11 @@ Do not infer administrative privilege solely from `is_superuser`.
 JSON parsing should tolerate unknown response fields so additive upstream changes do not break the app. Missing fields that the app needs must fail explicitly at the mapping boundary rather than becoming unsafe null defaults.
 
 Generated enum additions must not force UI changes. Map them to a stable internal `Unknown`/`Other` value when the app can preserve safety and meaning; otherwise return a documented compatibility error and add an adapter before release.
+
+The root configuration capability list is intentionally generated as strings,
+then mapped to app-owned `ServerCapability` values. This preserves unknown
+future capability names so an additive server change does not make profiling
+fail before the app has chosen how to use that capability.
 
 ## Release invariant
 

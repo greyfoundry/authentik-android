@@ -20,6 +20,7 @@ These are the selected stable baselines for initial implementation, subject to c
 | Navigation 3 | 1.1.7 stable |
 | Retrofit | 3.0.0 |
 | OkHttp | 5.5.0 |
+| MockWebServer | 5.5.0, tests only |
 | kotlinx.serialization JSON | 1.11.0 |
 | OpenAPI Generator | 7.25.0 |
 | AppAuth-Android | 0.11.1 |
