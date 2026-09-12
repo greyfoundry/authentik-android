@@ -73,6 +73,10 @@ dependencies {
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.junit)
+    androidTestImplementation(libs.androidx.test.runner)
+
     testImplementation(libs.junit4)
     testImplementation(libs.okhttp.mockwebserver3)
 }

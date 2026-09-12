@@ -122,6 +122,12 @@ interface AuthSessionRepository {
     suspend fun accessToken(instanceId: InstanceId): AccessToken
 }
 
+interface SecureCredentialStore {
+    suspend fun put(instanceId: InstanceId, value: ByteArray)
+    suspend fun get(instanceId: InstanceId): ByteArray?
+    suspend fun remove(instanceId: InstanceId)
+}
+
 interface AuthentikGateway {
     suspend fun serverProfile(): ServerProfile
     suspend fun currentUser(): User
@@ -136,6 +142,13 @@ base URLs, display names, and the active instance identifier. Its edits are
 atomic, preserve insertion order, and clear active selection when that profile
 is removed. OAuth state, access tokens, refresh tokens, passwords, and other
 credentials are not part of this storage contract.
+
+`AndroidKeystoreCredentialStore` implements the credential boundary with an
+Android Keystore AES-256 key and per-instance AES-GCM envelopes in no-backup
+private storage. The binary envelope is bounded and versioned, authenticates its
+instance identifier as additional data, and is replaced atomically. Callers see
+only stable unavailable or unreadable failures, not provider-specific crypto
+errors.
 
 Do not force every future endpoint into one god-interface. Split `AuthentikGateway` by coherent resource groups once implementation size demands it, while keeping the compatibility layer as the only consumer of generated transport.
 
