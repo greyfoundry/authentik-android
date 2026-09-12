@@ -18,6 +18,7 @@ android {
         versionName = "0.1.0-dev"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders["appAuthRedirectScheme"] = "dev.greyfoundry.authentik"
     }
 
     buildTypes {
@@ -66,6 +67,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.appauth)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp)
     implementation(libs.retrofit)

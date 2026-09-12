@@ -9,6 +9,8 @@ interface InstanceRepository {
     val activeInstance: StateFlow<InstanceProfile?>
     val instances: StateFlow<List<InstanceProfile>>
 
+    suspend fun get(instanceId: InstanceId): InstanceProfile?
+
     suspend fun add(draft: InstanceDraft): InstanceProfile
 
     suspend fun update(profile: InstanceProfile)
