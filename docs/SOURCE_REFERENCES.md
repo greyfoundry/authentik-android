@@ -6,6 +6,8 @@ Research snapshot: 2026-09-12.
 
 - Upstream project: https://github.com/goauthentik/authentik
 - Documentation: https://docs.goauthentik.io/
+- Branding: https://docs.goauthentik.io/customize/branding/
+- Upstream theme color tokens: https://github.com/goauthentik/authentik/blob/main/packages/theme/src/tokens/color.ts
 - OAuth2/OIDC provider and PKCE guidance: https://docs.goauthentik.io/add-secure-apps/providers/oauth2/
 - API reference root: https://docs.goauthentik.io/docs/developer-docs/api/reference/authentik
 - Version endpoint: https://docs.goauthentik.io/docs/developer-docs/api/reference/admin-version-retrieve
@@ -25,9 +27,11 @@ Research snapshot: 2026-09-12.
 - Material 3 for Compose: https://developer.android.com/develop/ui/compose/designsystems/material3
 - Compose accessibility: https://developer.android.com/develop/ui/compose/accessibility
 - Compose state: https://developer.android.com/develop/ui/compose/state
+- Compose performance guidance: https://developer.android.com/develop/ui/compose/performance/bestpractices
 - Adaptive layouts: https://developer.android.com/develop/ui/compose/layouts/adaptive
 - Adaptive navigation: https://developer.android.com/develop/adaptive-apps/guides/build-adaptive-navigation
 - Navigation 3 guide: https://developer.android.com/guide/navigation/navigation-3
+- Navigation 3 stable announcement: https://developer.android.com/blog/posts/jetpack-navigation-3-is-stable
 - AndroidX versions: https://developer.android.com/jetpack/androidx/versions
 - Navigation 3: https://developer.android.com/jetpack/androidx/releases/navigation3
 - Material 3 Adaptive: https://developer.android.com/jetpack/androidx/releases/compose-material3-adaptive
