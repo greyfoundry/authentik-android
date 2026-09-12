@@ -51,6 +51,24 @@ Cover:
 - destructive confirmations;
 - accessibility semantics.
 
+## Screenshot testing gate
+
+Compose Preview Screenshot Testing remains experimental and alpha, so it is not part of the current test stack. Roborazzi is not adopted merely because Now in Android uses it. Its project-owned golden organization and cross-platform rendering caveats may inform a future decision.
+
+Until a screenshot stack is approved, use Compose previews for authoring and semantic or instrumented Compose assertions for behavior and accessibility. Manual screenshots are review artifacts, not automated regression protection.
+
+ADR 0015 is required before any screenshot plugin or library is added. It must select and pin one framework in `gradle/libs.versions.toml` and define:
+
+- fixed fonts, density, locale, theme, and device size;
+- Linux CI recording and verification parity;
+- useful failure diffs and artifact retention;
+- baseline ownership and review rules;
+- a prohibition on unreviewed baseline regeneration;
+- repository and CI storage-cost limits;
+- redaction rules for all captured data.
+
+After that gate passes and screens stabilize, store only project-owned goldens in the applicable test source set and index them from `design-references/screens/README.md` and `design-references/components/README.md`.
+
 ### Real authentik contract tests
 
 Run critical flows against containerized authentik versions.

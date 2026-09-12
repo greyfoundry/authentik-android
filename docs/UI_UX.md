@@ -4,6 +4,12 @@
 
 Use Material 3 as the interaction foundation while retaining a restrained authentik-compatible visual identity. Do not clone the upstream web UI pixel-for-pixel.
 
+## Evidence and design review
+
+UI decisions follow the repository evidence order. Start with project specifications and accepted ADRs, verify implementation guidance against current official Android documentation, inspect only relevant files at the locked commits in `design-references/upstream-sources.lock.json`, and use shipped-product research only as an observation source under its applicable terms. Design synthesis may combine these inputs but cannot override them.
+
+Read `design-references/sources.md`, `design-references/reference-map.md`, and the relevant project-owned pattern note before adding a materially new screen family, destructive workflow, or adaptive relationship. Local reference clones and licensed research are not dependencies or product assets.
+
 ## Navigation
 
 Phone:
@@ -94,3 +100,9 @@ Use platform-consistent navigation and state transitions. Avoid ornamental motio
 - dynamic color optional;
 - semantic severity colors controlled by the app so warning/error meaning remains consistent;
 - do not encode status solely by color.
+
+## Visual validation
+
+Use Compose previews to author component states and use semantic or instrumented Compose tests to protect behavior and accessibility. Manual screen captures support review but do not provide automated regression protection.
+
+No screenshot framework is currently approved. Compose Preview Screenshot Testing remains experimental and alpha, and no project adopts Roborazzi or another golden stack by precedent alone. ADR 0015 is required before adding a framework and must define deterministic rendering inputs, Linux CI parity, failure diffs, baseline ownership, regeneration controls, and storage limits.

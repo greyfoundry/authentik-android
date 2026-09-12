@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-12T16:36:59Z",
+  "repositories": [
+    {
+      "name": "android/compose-samples",
+      "url": "https://github.com/android/compose-samples.git",
+      "commit": "4c1fe7586e2fbf1c934925ef8ab64d3803361423",
+      "license": "Apache-2.0",
+      "tier": 1,
+      "status": "primary",
+      "archived": false,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["adaptive-layout", "compose-components"]
+    },
+    {
+      "name": "android/nowinandroid",
+      "url": "https://github.com/android/nowinandroid.git",
+      "commit": "12f80da6518e161ed16a06a68e71fb8a873576d6",
+      "license": "Apache-2.0",
+      "tier": 1,
+      "status": "primary",
+      "archived": false,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["state-driven-ui", "adaptive-navigation", "ui-testing"]
+    },
+    {
+      "name": "android/nav3-recipes",
+      "url": "https://github.com/android/nav3-recipes.git",
+      "commit": "f4d115959f4f3a1e903e67705954c66aa008adef",
+      "license": "Apache-2.0",
+      "tier": 1,
+      "status": "primary",
+      "archived": false,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["navigation3", "multiple-back-stacks", "list-detail-scenes"]
+    },
+    {
+      "name": "android/adaptive-apps-samples",
+      "url": "https://github.com/android/adaptive-apps-samples.git",
+      "commit": "62abdd2a3212061277bca44d8ee0bee04c3ea689",
+      "license": "Apache-2.0",
+      "tier": 1,
+      "status": "primary",
+      "archived": false,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["adaptive-navigation", "window-layouts", "form-factors"]
+    },
+    {
+      "name": "kiwicom/orbit-compose",
+      "url": "https://github.com/kiwicom/orbit-compose.git",
+      "commit": "722ecd79e3a1eae9443a34e1a3f9bd93a12973fe",
+      "license": "MIT",
+      "tier": 2,
+      "status": "secondary",
+      "archived": true,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["component-anatomy", "catalog-organization"]
+    },
+    {
+      "name": "Gurupreet/ComposeCookBook",
+      "url": "https://github.com/Gurupreet/ComposeCookBook.git",
+      "commit": "81034459e22ff74470a0b3e96cf3973940707bbd",
+      "license": "MIT",
+      "tier": 2,
+      "status": "secondary",
+      "archived": false,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["isolated-layouts", "widget-techniques"]
+    },
+    {
+      "name": "aldefy/Andromeda",
+      "url": "https://github.com/aldefy/Andromeda.git",
+      "commit": "2e59fbf9620855e970b442473d29a59f7eeb24a3",
+      "license": "MIT",
+      "tier": 2,
+      "status": "secondary",
+      "archived": false,
+      "reviewedAt": "2026-09-12",
+      "purposes": ["token-taxonomy", "component-states", "accessibility-anatomy"]
+    }
+  ]
+}
