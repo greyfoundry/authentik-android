@@ -10,6 +10,12 @@ UI decisions follow the repository evidence order. Start with project specificat
 
 Read `design-references/sources.md`, `design-references/reference-map.md`, and the relevant project-owned pattern note before adding a materially new screen family, destructive workflow, or adaptive relationship. Local reference clones and licensed research are not dependencies or product assets.
 
+## Design synthesis workflow
+
+Before implementing a UI surface, read its project-owned pattern note, then `design-system/authentik-companion/MASTER.md`, then the applicable page contract. Use design synthesis only for a focused unresolved question, and verify the result against official Android guidance, accepted ADRs, accessibility requirements, and the security model. Persist only the project decision, not raw research output or copied source identity.
+
+The approved profile is a restrained, professional, content-first Android interface with low visual variance, low ornamental motion, and compact operational density. The design contract records the exact tokens and component behavior.
+
 ## Navigation
 
 Phone:
