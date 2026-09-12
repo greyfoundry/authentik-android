@@ -33,6 +33,13 @@ Do not treat biometrics as encryption by themselves. Biometrics authorize use of
 
 Per-instance credential envelopes must include the intended `InstanceId` and issuer/base-URL binding so a token cannot be silently used against a different instance.
 
+`AndroidKeystoreCredentialStore` keeps opaque credential blobs in the app's
+no-backup directory. A non-exportable AES-256 key from Android Keystore protects
+each bounded, versioned AES-GCM envelope. The envelope authenticates its
+`InstanceId`, so moving or editing a stored blob cannot make it valid for a
+different profile. The authentication layer is also responsible for validating
+the OAuth issuer and current instance URL before a stored session is used.
+
 ## App lock
 
 Optional app lock:
