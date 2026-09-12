@@ -16,6 +16,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.serialization.SerialName
@@ -32,7 +33,7 @@ class DataStoreInstanceRepository(
     private val dataStore: DataStore<Preferences>,
     scope: CoroutineScope,
 ) : InstanceRepository {
-    private val storedState = dataStore.data
+    private val repositoryStates = dataStore.data
         .catch { failure ->
             if (failure is IOException) {
                 emit(emptyPreferences())
@@ -41,11 +42,16 @@ class DataStoreInstanceRepository(
             }
         }
         .map(::decodeState)
+
+    private val storedState = repositoryStates
         .stateIn(
             scope = scope,
             started = SharingStarted.Eagerly,
             initialValue = RepositoryState(),
         )
+
+    override suspend fun get(instanceId: InstanceId): InstanceProfile? =
+        repositoryStates.first().instances.firstOrNull { it.id == instanceId }
 
     override val instances: StateFlow<List<InstanceProfile>> = storedState
         .map { state -> state.instances }

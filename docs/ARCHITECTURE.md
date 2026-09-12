@@ -109,6 +109,7 @@ These names are intentionally stable so feature work can build around them.
 interface InstanceRepository {
     val activeInstance: StateFlow<InstanceProfile?>
     val instances: StateFlow<List<InstanceProfile>>
+    suspend fun get(instanceId: InstanceId): InstanceProfile?
     suspend fun add(draft: InstanceDraft): InstanceProfile
     suspend fun update(profile: InstanceProfile)
     suspend fun remove(instanceId: InstanceId)
@@ -149,6 +150,19 @@ private storage. The binary envelope is bounded and versioned, authenticates its
 instance identifier as additional data, and is replaced atomically. Callers see
 only stable unavailable or unreadable failures, not provider-specific crypto
 errors.
+
+`AppAuthSessionRepository` is the stable OAuth lifecycle boundary. AppAuth
+request, response, discovery, and token types do not escape it. Stored AppAuth
+JSON is wrapped in an app-owned versioned record that binds it to the exact
+`InstanceId`, normalized base URL, and same-origin issuer before encryption.
+Access tokens use a redacted app-owned value type, and concurrent callers share
+one refresh operation per instance.
+
+OAuth discovery and token exchange use AppAuth's protocol implementation.
+Remote token revocation uses the project OkHttp configuration with automatic
+redirects and retries disabled. Local logout removes encrypted state before any
+optional remote request, so an unavailable server cannot keep the device signed
+in.
 
 Do not force every future endpoint into one god-interface. Split `AuthentikGateway` by coherent resource groups once implementation size demands it, while keeping the compatibility layer as the only consumer of generated transport.
 

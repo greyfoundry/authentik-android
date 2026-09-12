@@ -119,6 +119,15 @@ class InstanceRepositoryTest {
     }
 
     @Test
+    fun `reads one profile by identifier`() = runBlocking {
+        val instance = repository.add(InstanceDraft("https://id.example.com", "Identity"))
+        val missingId = InstanceId("6978cd24-0312-4fad-a78c-0d6fe2e8279f")
+
+        assertEquals(instance, repository.get(instance.id))
+        assertNull(repository.get(missingId))
+    }
+
+    @Test
     fun `persists only instance metadata and active selection`() = runBlocking {
         val instance = repository.add(InstanceDraft("https://id.example.com", "Identity"))
         repository.setActive(instance.id)

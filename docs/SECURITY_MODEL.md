@@ -76,9 +76,12 @@ Provide a security preference for sensitive-content protection. Credential scree
 
 ## OAuth redirect security
 
-- prefer verified HTTPS App Links;
+- use the exact package-scoped callback documented in ADR 0003 until a verified
+  HTTPS App Link can be introduced without a required hosted relay;
 - bind authorization response to AppAuth-managed `state`/PKCE/nonce;
 - validate issuer/configuration;
+- forward the callback only through an explicit one-shot `PendingIntent` to an
+  unexported activity;
 - do not accept arbitrary untrusted redirect destinations;
 - never embed authorization in WebView.
 

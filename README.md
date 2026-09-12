@@ -65,8 +65,12 @@ Foundation work is underway:
   transport behind an enforced app-owned compatibility boundary;
 - server profiling maps version, edition, and capability data into stable app
   models while tolerating additive upstream fields and capability values;
-- OIDC sign-in, encrypted credential storage, adaptive app shell, and first
-  Users/Events read paths are next.
+- OAuth state is encrypted with an Android Keystore key, bound to its instance,
+  and kept outside device backup;
+- AppAuth now provides the public-client OIDC boundary, PKCE sign-in request,
+  exact callback routing, encrypted session persistence, single-flight token
+  refresh, and local-first logout;
+- the adaptive app shell and first Users/Events read paths are next.
 
 The full delivery order is in [ROADMAP.md](ROADMAP.md). Completed behavior will
 be recorded in [CHANGELOG.md](CHANGELOG.md).
@@ -101,6 +105,9 @@ Dependency versions are pinned in `gradle/libs.versions.toml`. See
 [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md), and
 [docs/API_COMPATIBILITY.md](docs/API_COMPATIBILITY.md) before changing an
 integration boundary.
+
+An authentik administrator can prepare an instance using
+[docs/AUTHENTIK_SETUP.md](docs/AUTHENTIK_SETUP.md).
 
 ## Distribution
 

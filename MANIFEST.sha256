@@ -48,6 +48,7 @@
 0b2f363685a9cbde6190c54588c88af5641981c3c6b99dbb1dacb41f1649ce9f  ./CONTRIBUTING.md
 0b8911ffa8413de6a4c5fa672e7e263a9a9c0ec3e3f8e728bd10f13df83be704  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ClientTypeEnum.kt
 0b9cc2d20eef628ffe2e7d31a0dca0e54a23a603d7eafa362040fbaf69415fd5  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\InvalidResponseActionEnum.kt
+0ba70e08aaa8504a8fa0b4a9e650cfffb3b151eb17f73f9f309159993e33a700  ./README.md
 0baf565f73ee80a269d5b83f0b7d20871efe098230cd0d0682180b015e5fdb3d  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\TokenModel.kt
 0c0d04c6d41e78e8d3b02699ba90987551662064cde4d8380be68c2ad7ce72be  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DeviceGroup.kt
 0c15b7bed161336550472ca05ac9e5f6fa830631cd9010a91dcb6e31ff394792  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AuthenticatorValidateStage.kt
@@ -102,6 +103,7 @@
 15ace0971c8254108500715a0f0e9f0c2a400f9ff1fe186fc1e141c6c524d807  ./app\src\main\kotlin\dev\greyfoundry\authentik\MainActivity.kt
 161d30e371dea689655609ea976b1cfc861c0e2e05a7c94d46a2ed64e7be7cea  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedOutpostList.kt
 167b6b059996f56794c9ba3c1093b698af43da87c02b98435ed84f6aa244784b  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\OAuthDeviceCodeFinishChallengeResponseRequest.kt
+16a3b0849e2a5e1128fd12732546683076c11c2befa64453276b8e7c5cb6d4ae  ./app\src\main\kotlin\dev\greyfoundry\authentik\domain\repository\InstanceRepository.kt
 16cd38e1bc2d800aaa4ec3b806e6784ec3349081eec8233410d96a77b78db46e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DeviceFacts.kt
 16e04d24645f0bcdb88e731a23445c15249eb0f3e8d78ec5141a941b5e2c63b4  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\LicenseSummary.kt
 16e947dc96ad02ee456bb7a7f2ab41dcbeca46a5c2934d9a24e03615325aaf78  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\WSFederationProviderRequest.kt
@@ -128,7 +130,6 @@
 1c8774c45f3704fdf85bc5100178468cbe543c37910fc98bcbd7b78c7d3d9720  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedUserKerberosSourceConnectionList.kt
 1cf580062d599b0230ee16d9f4e55c8f820f1cc624157aeaa9fba17e122d7a79  ./docs\adr\0014-single-app-multiple-surfaces.md
 1d37d7609094939c911e36cffc206e809d3b1fa3205e629ef30f63b84d315610  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UsageEnum.kt
-1df07b44ffb8bf568699a8b02e98f4fefaf267588b02cd749dec5ab47911e632  ./app\build.gradle.kts
 1e82c057874ecd8916dd2f036acff717b2be2c1a863597adcaead31332dfcaaf  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedOAuth2ProviderRequest.kt
 1eb0c071aeda76dae8289fd5c11b0e35df3fd29b81cc524d23b960f327126c4b  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\NotificationWebhookMappingRequest.kt
 1ee86e79a46bf6935c62e62ba5626ccf8cf2ea04972db97e4d09df2a70d4ec8c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PlexSourcePropertyMapping.kt
@@ -178,12 +179,12 @@
 276f11cd66377ad5fa5f120ad47f26353a41ca56bc9ca2145c45b5105df7e987  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedPolicyBindingRequest.kt
 280d2aa115e2105bfc2b6d79b321399a4ba0bc98d3c0ed71baebeb52dfd69b21  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\RACProviderRequest.kt
 28d2f2a0c0ae2335df36011a0076f21e116b16771344d728b8d287b1d50c502a  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AuthenticatorValidationChallenge.kt
-28d60e4e2067f8f75b35d50bc67fc31b8ca9e6184ec2db55cc034ef2e804b126  ./docs\SECURITY_MODEL.md
 290761c58d57a4ab7529962bbc239edc229cb25b112ec1c7f8a55cd6b7e1bf81  ./docs\UI_UX.md
 2944abfd8a3915dc4354fd043a0ec16e03f6467fc1a9dd2ad22993190c86a2ab  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PolicyTestResult.kt
 29b87d7211d25c913ae9e0aa31cc1d56d73e8b30a12a86ccecf5142fbbcc045b  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedOAuthSourcePropertyMappingList.kt
 29f2d26b4bcc32a3796037ddd37a263236fabdcf53f12b466ab7138a79289a6f  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\WSFederationProvider.kt
 2ab669d564f3ca0f6a627d54a0723b8ab4a0648d0bca9388b83222532f70679c  ./tools\openapi\generate.sh
+2b056b33ecfd6fef1bfe1d7895fc16967f4a9c0cd7e67bc089dd6b20b3b6ab2c  ./app\src\main\kotlin\dev\greyfoundry\authentik\auth\OidcClient.kt
 2b3fb9d4848bf0f0bf711e4f3df841e403194abae7a62c8674f6853543b962a1  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SAMLPropertyMapping.kt
 2ba9ab25dcc81e7a22920bbd617cb68d51f2d347318e4f3f33cec5f601e5ac1c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedGoogleWorkspaceProviderUserList.kt
 2bb4cbb04e16225cb1a8b053ca487b9e28564a106ab680ac7ea730bf9dcef6d2  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SCIMMappingRequest.kt
@@ -229,6 +230,7 @@
 34c8e4e28b8c88da4df0933c6be9c4de3cdc1bc51a0c3bf3b774d56a80e98e26  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ExpressionPolicyRequest.kt
 35411b6e73be2edf1a09b31447e9bdbbdd8000cf44b7e4e6282bf31dfd64a679  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\MicrosoftEntraProviderUser.kt
 35a09e984e5b158b37a58b90c66da36d6c4a3d6e6633612fdaa21cd7c3d50dda  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\RoleModelPermission.kt
+362c6f27cd1d5ddcd4c8af00ab5d253295fee1fc9bb1fd272b246ad7ecb13c1f  ./app\src\main\kotlin\dev\greyfoundry\authentik\auth\AuthConfiguration.kt
 369c6a7902632c8d4db9de6caa6c9a6f39c4d19c19ee7e7dbfc164098b40e12e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SAMLLogoutMethods.kt
 375cc015ccb532844a8f4bebab29eaf3865beb52cf2e17bd134da4e399fcf433  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\MicrosoftEntraProviderGroupRequest.kt
 3776a9a85a3afc3d2c578c2284d9854c50dbb165ace3178d46f8ed820e39ba0c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedOAuth2DynamicClientRegistrationList.kt
@@ -240,6 +242,8 @@
 399c29fe428ad46b090dc51e39ab45ab69d7d0a95d5f0266ceead68d7c269827  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\MicrosoftEntraProviderMapping.kt
 3a46186d031e64206d2b74acb2cf904634e40da1d71b3238d7914f519f5bdb2c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedWebAuthnDeviceTypeList.kt
 3acf0d4e867739393d76d19848292100ba3e6a00b7416546856dc716e759983a  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedSCIMSourceUserRequest.kt
+3b3d1f21e23b06766fe9c4ee7c52c47958a875def9f6be6fedbf21acca62a693  ./app\src\test\kotlin\dev\greyfoundry\authentik\data\instance\InstanceRepositoryTest.kt
+3b91c040ee9eef47df03efa1cabd41f98d05b06755bca3a33f6084a9ec5d8ed0  ./app\src\main\AndroidManifest.xml
 3bbb8a56572ebdc270057b51ce27931c5fc79e09761f9c26715682946ed26774  ./app\proguard-rules.pro
 3bff4b6d02c9bca5008b6832839948c5448cfd57d6cb14e5ad61c80ed769f683  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedSCIMSourcePropertyMappingRequest.kt
 3d1264a2e5ebd1bb7e784c7c0f8075600cf225d6655660c7dda2ca17e778d1e7  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AuthenticatorEmailChallengeResponseRequest.kt
@@ -250,7 +254,6 @@
 3e69b7d4fa04bd4f67c8fdab476492cbe4a886b23ca439bcfac5e9e8a0d54fe0  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedConnectionTokenRequest.kt
 3eb569d688dcc33922d30917463d78932da8b12861094e339c0b4b4879a46396  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\NetworkBindingEnum.kt
 3ecd64ffd73d8a17bfa8156ed4566f32023ddea056023015bf8835de1b919321  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ConsentChallengeResponseRequest.kt
-3ed0c2fe8269f36e22e9b940c0a02621d0ab1a0c5a5bd0897d0ec4bab7200faf  ./app\src\main\AndroidManifest.xml
 3ed5f1f57b0382ef2c2a6ca366ad513ba0918bc19f96dfaffcd46daa8566c863  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedFlowStageBindingList.kt
 3f7d25dd4b536621c4072a81ffa0a6cdc661cc1a126771f492cb5245cac6829f  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PasswordPolicyRequest.kt
 3f909cd9dd456d5e1bfb688232509c98c35703ffbfc1873bd660ff3c49f9621d  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EndpointDeviceRequest.kt
@@ -289,6 +292,7 @@
 4773151dcd6b4d02dff342f796cf67c6c81658a7a2bc7768e61790d4fbf71379  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\RedirectChallengeResponseRequest.kt
 479e647572aa7820af0f0c274b54c09d30d750bf1bf466ba5c60d46b25a16fd0  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedNotificationWebhookMappingList.kt
 47bd9c26e3214f5f4ed7efe40387ef713fc4785f5bf7e5382bda1e5504798013  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ApplicationEntitlementRequest.kt
+47ef22b24dfd8900b1b2b13f17a4541b80f6edf93ce2d678306c009e77454b8b  ./app\src\test\kotlin\dev\greyfoundry\authentik\auth\AuthStateCodecTest.kt
 4812887c5d1acdc8fdd300dfb06eae214024f46f005e3b56767be0cd16cb06ce  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedSCIMSourceRequest.kt
 481994249bdc65c8e47f4c3bfbb8cc0023c787e081f73492a251f09168e0a1e6  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\FlowDiagram.kt
 483fe0f7563038331ac7ca91dbbd2ee0f390d9cf6edae5310b8cc189ecb593c1  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SeverityEnum.kt
@@ -403,7 +407,6 @@
 5e9fa391caee1c7b0f4b7d3f7e31089d8e02a6ee6c08b25c5f218026aaa9d029  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ExpressionPolicy.kt
 5ea215f756bf4a88f0659a420dac2cf224c70ae64e1c60e6d69ac117591c99f2  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AgentPSSOUserRegistrationRequest.kt
 5edeff9cbe17906d49a27991841950b73d3f2f7e6f57519bff1693a621cec8e0  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedPasswordExpiryPolicyRequest.kt
-5ee20ce1b53c81f2223afb32e959f3360175f426970f8b15d2c72600fdf3e0cc  ./app\src\main\kotlin\dev\greyfoundry\authentik\domain\repository\InstanceRepository.kt
 5f6ef3d04e5c766b057e0c2dc6e4e193069418afb3c26f91e2488a1bf08d0c65  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EmailDevice.kt
 5f76d05e376e38e5fbcf7e9ebeff213480b379fba8c6fda8bea2e368c705dac8  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\StaticDeviceToken.kt
 5ffe104729fec2ced2a345718aabf1ea6b6c237b67bed210959a6e814c0c856a  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedSCIMProviderList.kt
@@ -456,7 +459,6 @@
 699d41e0716d7920a50d84ff2b203bdcbc1e21f7df58aabf08a536a729551297  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SCIMSourcePropertyMapping.kt
 69b523ba4e82bb464ca89f76801aeb4eb5ed1ef766ff6ce4144df3eec0661899  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\InvitationStageRequest.kt
 6a0fc5c2fc7e4f72f7c420a2b6b810bd1f63a141fd7d9076ae4b85057bb29727  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedDeviceUserBindingRequest.kt
-6a29d75f978bd3d166881bb6758cbfb3b87fc80d13e47aa2202eca0441aab776  ./docs\adr\0003-appauth-pkce.md
 6a3886d618d1739c76bc130ef2b3b9ca461fa8354ac6cb1bb4ffd8f867ce890c  ./docs\implementation\06-infrastructure-blueprints.md
 6aca43d35e914e43d66d7eb03701788062aab85a802d77a8366d84f0a8c78f26  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedEndpointRequest.kt
 6b1dc1b24f60e104ca38d733f96f3bfb59729c382d72e7a88a8462e0d594445c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\infrastructure\AtomicBooleanAdapter.kt
@@ -465,6 +467,7 @@
 6bade205e62c0f1db34823362718cfaf6aab2324c62794657ad9d45025e90ea6  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\IdentificationChallenge.kt
 6bd10d4f3ea765f1430129108356562c0f06e39e91b8aafaa6f5a8c856255412  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\TokenRequest.kt
 6be3a197a83d849c04d2cd41cf8d0fc930ed9e0f46e54ee105eae5ca269d2c31  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\WebAuthnDeviceRequest.kt
+6c086fccc34a457665a8040614a6df11b615a6f6c2b52fdd7a5cd5d7680e7b8b  ./docs\SECURITY_MODEL.md
 6c8d7c320a2d7bcb8bbf40f21bafc8bc420515da4e77be216e6e84aeca3dee18  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedKerberosSourceRequest.kt
 6ccc9c8950cb65c3db574e8c5ebdff82e0445f81a3401df3535d5e849fc93097  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AgentCreated.kt
 6d655620ced57cb1891ef3f65369cb02e13e889cff90d9a265601803b76d7a37  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\GoogleChromeConnectorRequest.kt
@@ -473,6 +476,7 @@
 6de37bf1b128ac43c236bb2e8d32b677c4eb4aea444aefd09366b7e2f9ee141e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedSCIMMappingList.kt
 6e32fc67413dc706977a7e0cb792571bd53ffd870e8f55567b94893f54072a33  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserSAMLSourceConnection.kt
 6e8ebe951aaa274c7485369ba3b4e946fbc70044719e6a732a9da718bea31043  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserSourceConnection.kt
+6e9261b040f9ed71db20fa13a3a165d73d4d89e826dcc6353ce7bfe418ecc64e  ./app\src\main\kotlin\dev\greyfoundry\authentik\data\instance\DataStoreInstanceRepository.kt
 6ef6719815a52a84a4844163e47e5d038dc7f733eecedba3097cef4460d6194d  ./docs\adr\README.md
 6f19b9dce677d97b17bcef5d735afc23f7b3e0c70e8c17666c68d827270a886e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\Provider.kt
 6f3386b8bb00f05afe29e89e525d07ab3995080a34e1c0c61ead8482093bdffd  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\Event.kt
@@ -497,6 +501,7 @@
 75a4af17edf0f552cd61bc5e008500d876760fa1563c96be1611f8c679200c1f  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedFlowRequest.kt
 75bc650604654345d4f5e9bfddf0d9e3eeea8eff7f14a2a0ad21fc64cc479bec  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedPromptRequest.kt
 7602e1806c38aef48ca402a29a09e647685a6d824b33f10893cb883a7cc59b51  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedUserLoginStageList.kt
+7603d3d8cb2f6aaa3e00600a61014c5662ba2d5ceba337fb66dd4ae0afc86a06  ./app\src\androidTest\kotlin\dev\greyfoundry\authentik\auth\AppAuthSessionCallbackTest.kt
 76b92bd2497b242947dca80629dc562b9ef95c231b447510930301995270d5c6  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\GoogleChromeConnector.kt
 76c52ab3f2ef6f0a2cc52dd0d1ef057d0071d0e0874517a288d8365a6a5f229e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedEnrollmentTokenRequest.kt
 76f605b2c800091a36e83056861d547cf0dda2a515d394247f161795974795b3  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\InvitationSendEmailRequest.kt
@@ -533,11 +538,13 @@
 8022e39ba85e2f8623303c770035645930765077b940c52a9735f0d3bb712912  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedRequestRuleRequest.kt
 804177461861bf865674c7a8172fdefc3727a2fe3b22dc6906fd5d1ed67ef3d3  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedRadiusOutpostConfigList.kt
 8076ea7e6ab02a844fb8b92f0a79b31ca1925d0dfa6008afc723416bcbf8d435  ./PRIVACY.md
+807c1fc41d3b203e8fd01b0855a1c7f6c1844fc1c642411bfcc5e61cf870cd9e  ./app\src\androidTest\kotlin\dev\greyfoundry\authentik\auth\AuthRedirectTest.kt
 80f7efc78dd9bd143f82aa42b95cfac10f270d4ea97d23bfb7f73a480e8cc221  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedCertificateKeyPairRequest.kt
 813371989fc921cbb0acd6f7121413996921e19824e6a15d396b16c22efa3b88  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SCIMSourceUser.kt
 8143c33d97678b865638dc220ba92353c608e51968b399b9e283113babe512c8  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedGrantRequestList.kt
 817232eb5367463a68516c9b2ed4d5481df307049ac1c25438d0c84ec5e8ac8e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EndpointAuthModeEnum.kt
 81833d6c1291c5c97609b3d48004c3360ba3fc10130ae20f3b1861ca23f45494  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\OAuthSource.kt
+81fa13fdae567605188285eb4fb010403c03520207d1e4f6d7724cbf98c74ba5  ./docs\implementation\01-authentication.md
 82046f3ed58575e33b20db9a8a8d1386e53281306ad3dac25ac2e413d8c558cb  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedDeviceAccessGroupRequest.kt
 820fdd12856c78a6129db39866f7dd84c6d4f110ddff78fef9177ee07e720b8b  ./docs\adr\0001-native-android-kotlin-compose.md
 828275f6eb60ec75034ba769e5a1a00f1e282268c7c3dbb1fe6f332ef039fc80  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedInitialPermissionsList.kt
@@ -548,6 +555,7 @@
 83cc4e4d65743e849e554e2e9636333098c7f91424c975ffe369c7cc5aed6765  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedTelegramSourceRequest.kt
 8446fc0a29cacda248efa9ff0f83dfd6e0062457dffbd45e79177d233a909c7c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\Role.kt
 8486a561efb953d85bd925c9996fc393226fd3d59078f7b1863de9d1ae2b7d54  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PasswordChallenge.kt
+849caa80703d9024a8e13253142cd665b70863aef683fb639911baade1760076  ./docs\AUTHENTIK_SETUP.md
 84b8ab519a5efb82beff9260693cf6cbfbf7edea6ea504cdae3aacc55f6933a0  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserKerberosSourceConnectionRequest.kt
 84e67c0ef4e6505f399ef913dceb33e123b5b2aeb9be066e809259eb8293451c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedMicrosoftEntraProviderRequest.kt
 854c236b14c74c20af51346d015bec6cbf6d27888538e213f0a71a702a4282df  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\TaskAggregatedStatusEnum.kt
@@ -562,10 +570,10 @@
 869e9b409485d22050ab10cb568c15e080027d7a0f17335dcd589767ae40733c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedGoogleEndpointDeviceList.kt
 86a098fe7041f0268f7e532c9f981837a3c0083332e1afe9206bc5bde43ad41e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ContextualFlowInfoLayoutEnum.kt
 86f1c2b921fa687ef07f9294911458de20b699cc927966925d3989d49c96dff0  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EndpointStageRequest.kt
-871a8830b8ae9144a60825dc17074d3096b17db1aceb667cd55b6ebb351f73d4  ./gradle\libs.versions.toml
 8734dbbaff27f82e00ed4e58b3e98e74be354f63c0f6ecca6126557dabcb42ce  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PromptChallenge.kt
 876c3d83845f0a03f6b3df456a97973f1a378e25022b7a331af2bd86e7758d2a  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\BulkDeleteSessionResponse.kt
 876c6bbf49686c56495bdbb6478759d39746d405eaede055474c62faef0ab752  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedMicrosoftEntraProviderList.kt
+87923b16fabe6c4d250e9077b96135b929baa096af24b125170b7da3e70fac0b  ./app\src\main\kotlin\dev\greyfoundry\authentik\domain\model\AuthSession.kt
 884ad745e01b0f7874d1954ea21c1754e76c10282ce8c8fc5801f61d7144c6f8  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EventVolume.kt
 892ad19762eecbb59c445bd2152fda97cf7c96b0e8a6b37de283c8eef78e61ac  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\api\ProvidersApi.kt
 89b17ae8571115a9507b190aef9e5824da64661ef0fae093d2c41af9d042be27  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedRACProviderRequest.kt
@@ -635,6 +643,7 @@
 9618960791e644f0e15d8f8aa1632f9c7144c42f2e74729fb9136e953196d415  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EventMatcherPolicy.kt
 96ae260e00fbfa2b2939686359cbf2984b571dbbdf703e174fe681146a73d726  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\LoginChallengeTypes.kt
 96c4a23805d1a3810c2aa62712782c29ba76c431c5a8b7e6b4950f2ca36dd46d  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedSourceStageList.kt
+9729e98af0d86575769b7a96c7d3eb00f47662daf92486de12763edc550afd2e  ./app\src\main\kotlin\dev\greyfoundry\authentik\AuthentikApplication.kt
 973b0b5ed3afd2d8896e51fb230aab9763f76304d44cad57d89afd1c571696e8  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedSCIMSourceList.kt
 9740b4425d3fef52a5f17b811c7f460c01d1d81b19cc956b1b06a8c7763dd400  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedOAuth2ProviderList.kt
 976e922ae687080a6055bb62e6ba5365626c90b49a071b55945374e5e3976a6e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\FlowRequest.kt
@@ -662,7 +671,6 @@
 9b1cbfa2049117c5f82dbf4fc263ff509ef3ad0f8cbe53d2fcef1c396ae18f9c  ./app\src\main\kotlin\dev\greyfoundry\authentik\security\SecureCredentialStore.kt
 9b2356ff76b45ebf00116707cb058ff7f661af05805ce80a69f5f1f70b6ad914  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedPasswordStageList.kt
 9cad1d81401c518e8a07a2c05059fbce15a0487a9c5e1a434612c45eb3e0eb41  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\api\SsfApi.kt
-9ccfae8964b86a3d03d2d6af75260709050c9d0d1912dfd497d6180f658721b3  ./README.md
 9cf391a428b55dfc529a601e6dfc613a437eac2f39af99589ca7c29b9a68b67e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\infrastructure\OffsetDateTimeAdapter.kt
 9cf92d08ec9f8d41e9e6c2006f7bb68b6ae3f49ac90c4e77c73a1475b0316dda  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ContentType.kt
 9d5554b79c3c43c562bc2f2b0f6effaaa096d837252adb27dbe33ea179537e9b  ./app\src\main\res\values\strings.xml
@@ -747,6 +755,7 @@ b0bbd355a46366731859f9da7ccda3e605d599a0b54ba62d91f04a14a27eaa7b  ./api-generate
 b14dfa5d6ede415d5228bad2082e9c905f5676264f496f75c63ed920543947cd  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\api\ReportsApi.kt
 b186bc365831c243616d992d0ba65e49f5e21944b0a94e860c5f2be24f7ff5dc  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\GroupKerberosSourceConnectionRequest.kt
 b1abb1ac0e4c7c40055c94230ad8fcad7a926760eece8055142d4632017702dc  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedRoleRequest.kt
+b1ca11a75c16a271f696716aa10ba4d04f804f21e00043370392c009ee76fa16  ./app\src\main\kotlin\dev\greyfoundry\authentik\auth\DefaultOidcClient.kt
 b1f05ff6369db6091c755c2b622fc757374ee60be8b188aef64491f1d38dbb4a  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedInvitationStageRequest.kt
 b230e924f2689d5bd710fed4fb70438a8223d15fe922dd44813b0ea8369db1e1  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SCIMProviderGroup.kt
 b255a1160687078989e8a7cfbeba4eaf4bd8939afc1af90aebb0e2066dafd2a4  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\BlueprintInstanceRequest.kt
@@ -787,10 +796,11 @@ bb91f32d9ab65abc3f2ea8bc63012c1909941d97acba0a126f007a7966b20fc9  ./api-generate
 bb954e6a0c0ba87c9ab73dacc31d748e2e1513853f82fc8b49cee04c6338674b  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AuthenticatedSession.kt
 bbe460f1c14f049db5307d82cea83c474de7b9d08786fd68116fac4278c609c5  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ConnectionTokenRequest.kt
 bbf5fa8f4b041073722e93b1cb0ce5e18ff03ca43e576873225f4e637b7a77e2  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DeviceFactsRequest.kt
+bbf96fab245240579230665817c4b893d5b93797f561d9431397698a73b03ef7  ./gradle\libs.versions.toml
 bc057808085ca6ec23f0265afcad8efc72d97935c9a2de4b5cdee7f314a0e114  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\GoogleWorkspaceProvider.kt
 bc2f227c90026891cd5d4e986cedc6b4e37b473b3dce82fe5e70008fbe46036d  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedWSFederationProviderList.kt
 bc5baa0555ff71582b8f7b5bd359da5b167b118b3091415e5d4ac7a442aa4db5  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedGroupSourceConnectionList.kt
-bdf01abfec5d63c645d0e458685ed4eec24ba8b5ee630b255945e8b2c4ccdc60  ./app\src\test\kotlin\dev\greyfoundry\authentik\data\instance\InstanceRepositoryTest.kt
+bd9e5159d96bc029884451f310bf9064088d5692558f47b05c0d30d17c5a9c60  ./app\src\androidTest\kotlin\dev\greyfoundry\authentik\auth\AuthorizationRequestFactoryTest.kt
 be28d90c31edcaeddfb6ce2973886ee1cfa3c4d1cdf78b28e2e3c596245c5a0f  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedPlexSourceList.kt
 be487970106604a154240cd6e9e7401ca46714e48b5c7a93d059920625ad26cc  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DuoResponseEnum.kt
 be588e03085b1affb979a74c5ed34882576616edd777fdabd09ee66118c42634  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DeviceUser.kt
@@ -799,6 +809,7 @@ bee818383aa306712331ba5a2559b6c29ed1115697f8bdb8d8c72c7f89730ff7  ./api-generate
 bee8b92238730e0c08066366f7d02f8d5bb92bebe8ac44719d46d5e9e8d80a0d  ./docs\DEPENDENCIES.md
 beeb7ad16d64894186765f7f8e0f19c32fa995a2498555d705592adec517a3a4  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\LastTaskStatusEnum.kt
 bf2d773c70a5ebf3058d5c467d77b82cdfd63a3818d22556079c839a2ffee6fc  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\GrantRequestCreateRequest.kt
+bfa17fc38f55d9f26d2591b2cf838730acbf3904756b59db1b1af61c3d77b994  ./app\src\main\kotlin\dev\greyfoundry\authentik\AuthRedirectActivity.kt
 bff6a4fef56038fb20349c70b6c782186dba3d19491422e3c15923bfaac8374e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SourceType.kt
 c03b17675da8b086668990ab5afbbf11c806ea1855c8181951d4affac2e2759c  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserOAuthSourceConnection.kt
 c03e06ea70d5c84679851eda30fa4a8eaf9cf4b187cc8110ac4d2b9971c4d890  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EmailChallenge.kt
@@ -865,8 +876,10 @@ ce92f94dc9a4e52a9e4796678b46c773b60e53147513f26c35d1a3b35d37597b  ./app\src\test
 ce950134d71bcb8ab37f9fb17dcb5bd8d0031a55287b0275f421a5dc8791afd1  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedOAuthSourceList.kt
 ce99939fb26a3358d496e459153644b67b7226a1c7f8fe1a0139aa6e373d74c6  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SyncObjectResult.kt
 ceb714b910916f9be752e9cc9af6f62e174a2cad62acb3dc56378bbc55abe941  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedOAuthSourceRequest.kt
+cefb32bea027c766b50ce2184a08695b3d33f4f9a56ea58c2109264718dd2d45  ./app\src\main\kotlin\dev\greyfoundry\authentik\auth\AppAuthSessionRepository.kt
 cfa2fa3586ae5a345bfb47346f44289b9278535ecc6e2730815b8f2486655d73  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserLogoutStage.kt
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  ./LICENSE
+cfed499274c5ef592d7a74bba9d4739b305a1113aac149e367302d74045036b3  ./app\src\main\kotlin\dev\greyfoundry\authentik\domain\repository\AuthSessionRepository.kt
 d019a133fb8e236f63da5cfcf7911ee8663332ac0eab15ce8d21908fc9f67485  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SystemInfoRuntime.kt
 d021ea7a6532358c8ea7323b47639e4ad5edc58a45f4bee371c6da4615cd2c64  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserPlexSourceConnectionRequest.kt
 d0359910a16d8af8575e953910f901665bf318e0e1fa2bccb06d080325696f41  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedRequestRuleBindingRequest.kt
@@ -901,7 +914,6 @@ d73cd5967beb0c53f25ea620d1c908a9f96063b4a0cc9a70f50a8650c073f85f  ./api-generate
 d769fc2d7bdf52a3d690bea4ac5f62e7b208a459132752824499533440e6b1a6  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\LicenseSummaryStatusEnum.kt
 d7aed6bbcec5f443b0da7b8f2ed86bbdd9cd50af0d404be827afcef2a6167b94  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedAuthenticatorEmailStageRequest.kt
 d7c04bcf296cfd01a5a06d1dbfcba08fbb4ba2d7a30d94d80222189853ff8844  ./.github\PULL_REQUEST_TEMPLATE.md
-d7e59c9281d7f084ed83d6efb837b52fb3b37da0f39744ef47c1520144b93d73  ./docs\implementation\01-authentication.md
 d8602ba3163ca3a72b2617eaaba30126414075359354c06a4b2b7e02ad13b748  ./app\src\main\kotlin\dev\greyfoundry\authentik\network\ApiClientFactory.kt
 d8a56318eb4d8754da706005c79b851c6d74a1697933cbfb33590aa7423372bc  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\TenantRecoveryKeyResponse.kt
 d93a2b5d7a3eefa18ee023cf908f23d94fb77d78944ba868c43a2af945087235  ./docs\adr\0005-manual-dependency-injection.md
@@ -915,6 +927,7 @@ da0feb5490f6171be1bf8fd5f30ff8251243827498ab44f8b4130c552a2b3dbb  ./api-generate
 da24c0108fc185bc5eb112cb985792b218023a438536857b04525080b1a428c8  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\Worker.kt
 da410b3f5d7fc0b11d72bc838a794ee74a73f44de112778add72dada3ebbae55  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedRadiusProviderList.kt
 da4fef08c27b94c8ddcc939a7f4382364060acc8f7ec422cb83c322b3f26fb36  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AuthenticatedSessionUserAgentOs.kt
+da92dface6dfda5a5c8e785b57968fd0a92d11bc442a6c245cffc8598bc452b7  ./app\src\main\kotlin\dev\greyfoundry\authentik\auth\AuthStateCodec.kt
 dad1b6ff1a48873011e309add97fd4bb3b39db5bda7ba9e6a2293da13a1d7781  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\FrameChallenge.kt
 dae2642e1a09ee4af00b48394d9b7d40fd6bac024abcd65ead41f47a6d6b9dff  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedAuthenticatorValidateStageList.kt
 db3a688dedb6486e0b846f11ae150ef826b246c2879db437fa34992961d48539  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedAuthenticatorDuoStageList.kt
@@ -925,6 +938,7 @@ dc30675f5db11722515a55806d21fd79fd69e9a8377cca1ea9cb4a43746dbbc7  ./api-generate
 dc41b83907782373258e839d1a31fb811e07ec7fc3ad76a979d58edc42688d94  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedObjectAttributeRequest.kt
 dc8078708d2e0de0a93ea2ed3c10136b12f7d60d621e9c6047ce542fea8cc6c7  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ConsentStageRequest.kt
 dd1cef70a78f05f5d7502db7cddb645f1725758659f6e3848c003f89d4ddf5d3  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedUserOAuthSourceConnectionList.kt
+dd6778536a851cef126bc2b19ce66c574efdfe00041740c873da60492f66d777  ./docs\ARCHITECTURE.md
 dd698d685a1ba297ce609c493354bc4b8686625431622efddefdfe6df51e275f  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\EmailStage.kt
 ddba9b4ef66c478105f86db8a5182a918753226f53cffa9c4b5f500ca358fba6  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedAuthenticatedSessionList.kt
 de3aef5ec643c8440b42b8686c2a8a7bdeb54cdcd6f3665cb9fc65fa971fff4d  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\Outpost.kt
@@ -979,6 +993,7 @@ e9cb600b858b25b2da2ab93f62c90c12e1d1a3f2a6392c853d3a6eb23664da70  ./api-generate
 ea73107d8cb7d6e3567422b02d98b8b082e9cd7750755b767cc697d8413edad5  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\api\ManagedApi.kt
 ea98d7d952b697a6bd4ca982149048b09377a91beb32d9506b0651393f763a26  ./.github\dependabot.yml
 eab3560a9fd5f7c30193cca2c36f550d808f0e9eda29fde130b8d66880c8f878  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedPromptStageRequest.kt
+eab80d72810a6e7dbf7211877d80370fc16ccfa92973e6d27eccb51d529bdc36  ./app\src\test\kotlin\dev\greyfoundry\authentik\auth\AppAuthSessionRepositoryTest.kt
 eb1489e0af9c5fcd8b96037a2799f8cc6630a5532c3b1589f6be1945a706feee  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserPath.kt
 eb4b0aeba5c993e0783102d405123c9338a7843802da5c0c7474034b0a7c25dd  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UsedByActionEnum.kt
 eb5d21538470e399ebc13c083b6a851a19f80da73c1b3f9cc3513f891bbd3d0d  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\UserSetting.kt
@@ -991,7 +1006,6 @@ ec02dd6d29aabca494b92ffdf527c5bd9c05cc47682db7ffe4cb62103f223001  ./api-generate
 ec87de26c6997d62b7a3e76addf877e60bea3e3a39bf262255b37459eb79fc87  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\LogLevelEnum.kt
 ecd5071b9974daa9daf97e79d10135042f888e47d93703c861657618cc43936a  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\SyncOutgoingTriggerModeEnum.kt
 ece2989ec11c2cc4dd899e5202fdee6fedfe45ea73c077cf494fac5c9c3eff7b  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AuthenticatorEmailStage.kt
-ed7c897dbe612fe37d67bcb5efe448fa83c7e7c88611de8b2dbd31883a1826ce  ./docs\ARCHITECTURE.md
 ee1e036e5f72bd1b12b49d99c4dfd1896a817cde4d679b529252e2feef4ef118  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\ConsentStage.kt
 ee3c6616472e6f8cf268d9456ad2b3ee7b5b7ed146e93670a4f30aca6fa74ff1  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\NotificationWebhookMapping.kt
 ee3f305b5291b96b897384c19d57171461dca188b98d1c9cca4d92082d6de613  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\RadiusProviderPropertyMappingRequest.kt
@@ -1003,6 +1017,7 @@ efe62aa59a7314dd33d84ca76fe55f7bc4a2c86a88293af9fb6f8dc4bac5878c  ./api-generate
 f0010e352ecde0a2b10a6fa4ace60c4cf22a15f8b624921a9ae36cb860e9939e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedTokenRequest.kt
 f0057faa58a0a1548c69204eee931ddb1874e8e8ff3b535c84feddd5f1965460  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\OutpostRequest.kt
 f005ef3ac1681ed9a9c75cbc2c9acc3669255aeb9074ec7c076b0b776613209e  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DenyStageRequest.kt
+f0256591c68059df862edef883b3698fb72a0f9b0b11023750628f4549844683  ./docs\adr\0003-appauth-pkce.md
 f036185f0b6cc4599f7baad2abb1107aa355f8d2deeb5d34dee01a8f95027359  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PermissionAssignResult.kt
 f0ac7d87abac0e53fd00ae324ef5fb0e9b77868faee834ed60f64a8f57eb65f9  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DigestAlgorithmEnum.kt
 f0bbe132613a66896abc0a4ea9acc288a6ec4476d14079064b38c7b625147e09  ./app\src\test\kotlin\dev\greyfoundry\authentik\domain\model\InstanceTest.kt
@@ -1031,6 +1046,7 @@ f5fae7ade4f5dd6c6fb13516d8e01e99a836624f8aab04cbfe33d02150619816  ./api-generate
 f64896dd142db0963b6f3c4b6186e1d9fa7ba2ef38aba9aa9cf9857fc147a2d4  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\Schedule.kt
 f662abdbe3cb5690dacb793ced745e59433b593533e4f5d11a85f7d9f967c96f  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedSAMLPropertyMappingList.kt
 f69c48f27108fe759fe1f1026e711526268bdfcd41507e9fb3755412663c2770  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PatchedRequestRuleChildBindingRequest.kt
+f6bd3eb506e766f3e076a9a934f675dbf524ec44758cdb33c59a9fdc66d6e759  ./app\build.gradle.kts
 f8044bcbe4c688cf85e52c5b3423e5ca461c79e85978c5e9dc411ab0eacf7648  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DummyStageRequest.kt
 f80f8b057efbd5364be4e87862674b8e1b3de81ac4d7ed562e0ddd6db69fd447  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\AppEnum.kt
 f81ba0a7185e243bd91c9bb9b5cc5778d145ed5aceef634d29e3a9d19c4deaa9  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\api\OutpostsApi.kt
@@ -1051,7 +1067,6 @@ fc789028d34c15a8da417b80f8787f336895038a8fbdf4b025c08d47312a50c2  ./api-generate
 fc8872ba18bfa43a877b5f9afb61434096c988e036608356c8d170f85d3b57af  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\DeviceConnection.kt
 fca7755cdcd99fc08d420f3bc9c2df915ef2fffbd80415dda3def967c2008498  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PlexTokenRedeemRequest.kt
 fcb6833689629c34a9cf2cabb787b82b74c2fe8a3b529e9e54432fe8bb0a74d8  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\infrastructure\URLAdapter.kt
-fd21d55dbf639cc53914b2ce71afd9c95f5ff4234f0665e7bb178b42698673a5  ./app\src\main\kotlin\dev\greyfoundry\authentik\data\instance\DataStoreInstanceRepository.kt
 fd38e6d5afb09e2e06169a5bb29e3bb4da5bef569facb262a350f1d1291b3174  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\IframeLogoutChallengeResponseRequest.kt
 fd718690b1a8a8e461556be635f5b7a8643b511605c2864ff8ea36e7b43cc507  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\RequestStatus.kt
 fd7e609e971485449b856edf0b15ac55d9f331a22ec4f75a218cf5fc6b0cf933  ./api-generated\src\main\kotlin\dev\greyfoundry\authentik\generated\model\PaginatedUserDeleteStageList.kt
