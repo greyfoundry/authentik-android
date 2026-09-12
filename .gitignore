@@ -15,5 +15,5 @@
 *.keystore
 secrets.properties
 .env
-/design-references/
-/design-system/
+/design-references/.upstream/
+/design-references/.licensed/
