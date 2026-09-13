@@ -38,6 +38,44 @@ class ColorContrastTest {
     }
 
     @Test
+    fun `operational status icons meet non-text contrast`() {
+        listOf(
+            Triple(
+                "light success",
+                LightAuthentikExtendedColors.success,
+                AuthentikLightColorScheme.surfaceContainerHigh,
+            ),
+            Triple(
+                "light warning",
+                LightAuthentikExtendedColors.warning,
+                AuthentikLightColorScheme.surfaceContainerHigh,
+            ),
+            Triple(
+                "light stale",
+                LightAuthentikExtendedColors.stale,
+                AuthentikLightColorScheme.surfaceContainerHigh,
+            ),
+            Triple(
+                "dark success",
+                DarkAuthentikExtendedColors.success,
+                AuthentikDarkColorScheme.surfaceContainerHigh,
+            ),
+            Triple(
+                "dark warning",
+                DarkAuthentikExtendedColors.warning,
+                AuthentikDarkColorScheme.surfaceContainerHigh,
+            ),
+            Triple(
+                "dark stale",
+                DarkAuthentikExtendedColors.stale,
+                AuthentikDarkColorScheme.surfaceContainerHigh,
+            ),
+        ).forEach { (name, foreground, background) ->
+            assertContrastAtLeast(name, foreground, background, NON_TEXT_CONTRAST)
+        }
+    }
+
+    @Test
     fun `fixed brand pairs meet the design contract`() {
         assertEquals(Color(0xFF9C250E), AuthentikLightColorScheme.primary)
         assertEquals(Color.White, AuthentikLightColorScheme.onPrimary)

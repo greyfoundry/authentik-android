@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">authentik Companion</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_show_details">Show details</string>
+    <string name="freshness_fresh">Up to date</string>
+    <string name="freshness_offline">Offline</string>
+    <string name="freshness_stale">Data may be out of date</string>
+    <string name="freshness_updated_at">Updated %1$s</string>
+    <string name="loading_state_in_progress">In progress</string>
 </resources>
