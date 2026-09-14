@@ -9,4 +9,13 @@
     <string name="freshness_stale">Data may be out of date</string>
     <string name="freshness_updated_at">Updated %1$s</string>
     <string name="loading_state_in_progress">In progress</string>
+    <string name="destination_home">Home</string>
+    <string name="destination_directory">Directory</string>
+    <string name="destination_access">Access</string>
+    <string name="destination_activity">Activity</string>
+    <string name="destination_more">More</string>
+    <string name="navigation_select_user">Select a user to view details</string>
+    <string name="navigation_select_event">Select an event to view details</string>
+    <string name="navigation_user_detail">User details</string>
+    <string name="navigation_event_detail">Event details</string>
 </resources>
