@@ -9,6 +9,11 @@
       "licenseFile": "third_party/lucide/LICENSE",
       "icons": [
         {
+          "name": "activity",
+          "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/activity.svg",
+          "sha256": "050fbcda05e13c2051cf857683645e19c6b180861ef4d0cc28a6f09ba1ea1666"
+        },
+        {
           "name": "circle-alert",
           "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/circle-alert.svg",
           "sha256": "ce3e98b7a03b78c0071131df42466e4e1ff5187fccad30e739ec9ce951cf685a"
@@ -19,9 +24,29 @@
           "sha256": "9711e045a5999f8a3b0782eb88e09b04e0559bc7b379dcc0a4ae645223e10345"
         },
         {
+          "name": "ellipsis",
+          "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/ellipsis.svg",
+          "sha256": "4f495cc72013ffdfec677f03b33a150f7b4dd741979283fd6853a09024bca112"
+        },
+        {
+          "name": "house",
+          "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/house.svg",
+          "sha256": "28216c479005731ef5e382e7d8627eda2b129b019eb1f3d9de9f5915576d448e"
+        },
+        {
+          "name": "key-round",
+          "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/key-round.svg",
+          "sha256": "f8cdea843754ed360e36b04bf6aa2c2b3610935dd39ffc685a36c4d0a05be248"
+        },
+        {
           "name": "triangle-alert",
           "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/triangle-alert.svg",
           "sha256": "4866f38b8560d410f21e3226413e0b77997b6dfbb6931fadfe0a0d5aef9ffeb4"
+        },
+        {
+          "name": "users",
+          "source": "https://github.com/lucide-icons/lucide/blob/1.45.0/icons/users.svg",
+          "sha256": "eeed488a1ec95ba730dd69996536fb65061d6ea273afb2429ae47e65eebf401c"
         },
         {
           "name": "wifi-off",
