@@ -9,6 +9,10 @@ updates:
     commit-message:
       prefix: build
       include: scope
+    # CodeQL 2.27.0 supports Kotlin compiler versions below 2.4.20.
+    ignore:
+      - dependency-name: "org.jetbrains.kotlin.*"
+        versions: ["2.4.20"]
     groups:
       gradle-minor-and-patch:
         applies-to: version-updates
