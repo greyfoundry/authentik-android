@@ -4,9 +4,35 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+      day: monday
     open-pull-requests-limit: 5
+    commit-message:
+      prefix: build
+      include: scope
+    # CodeQL 2.27.0 supports Kotlin compiler versions below 2.4.20.
+    ignore:
+      - dependency-name: "org.jetbrains.kotlin.*"
+        versions: ["2.4.20"]
+    groups:
+      gradle-minor-and-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
+      gradle-security:
+        applies-to: security-updates
+        patterns: ["*"]
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
+      day: monday
     open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
+      include: scope
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns: ["*"]
+      github-actions-security:
+        applies-to: security-updates
+        patterns: ["*"]
