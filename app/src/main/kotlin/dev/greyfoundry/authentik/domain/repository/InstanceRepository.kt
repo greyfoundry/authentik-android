@@ -11,6 +11,8 @@ interface InstanceRepository {
 
     suspend fun get(instanceId: InstanceId): InstanceProfile?
 
+    suspend fun getByBaseUrl(baseUrl: String): InstanceProfile?
+
     suspend fun add(draft: InstanceDraft): InstanceProfile
 
     suspend fun update(profile: InstanceProfile)

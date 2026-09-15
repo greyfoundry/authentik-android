@@ -6,9 +6,12 @@ import android.net.Uri
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import dev.greyfoundry.authentik.AuthRedirectActivity
+import dev.greyfoundry.authentik.MainActivity
+import dev.greyfoundry.authentik.authCallbackReturnIntent
 import net.openid.appauth.RedirectUriReceiverActivity
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -52,5 +55,16 @@ class AuthRedirectTest {
         )
 
         assertEquals(false, activity.exported)
+    }
+
+    @Test
+    fun callbackReturnsToTheExistingMainTask() {
+        val context = ApplicationProvider.getApplicationContext<android.content.Context>()
+
+        val intent = authCallbackReturnIntent(context)
+
+        assertEquals(MainActivity::class.java.name, intent.component?.className)
+        assertTrue(intent.flags and Intent.FLAG_ACTIVITY_CLEAR_TOP != 0)
+        assertTrue(intent.flags and Intent.FLAG_ACTIVITY_SINGLE_TOP != 0)
     }
 }
