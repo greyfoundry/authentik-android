@@ -138,6 +138,9 @@ private class FakeInstanceRepository(
     override suspend fun get(instanceId: InstanceId): InstanceProfile? =
         profile.takeIf { it.id == instanceId }
 
+    override suspend fun getByBaseUrl(baseUrl: String): InstanceProfile? =
+        profile.takeIf { it.baseUrl == baseUrl }
+
     override suspend fun add(draft: InstanceDraft): InstanceProfile = error("Not used")
     override suspend fun update(profile: InstanceProfile): Unit = error("Not used")
     override suspend fun remove(instanceId: InstanceId): Unit = error("Not used")

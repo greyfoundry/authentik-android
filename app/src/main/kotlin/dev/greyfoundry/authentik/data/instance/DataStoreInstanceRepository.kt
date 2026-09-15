@@ -53,6 +53,9 @@ class DataStoreInstanceRepository(
     override suspend fun get(instanceId: InstanceId): InstanceProfile? =
         repositoryStates.first().instances.firstOrNull { it.id == instanceId }
 
+    override suspend fun getByBaseUrl(baseUrl: String): InstanceProfile? =
+        repositoryStates.first().instances.firstOrNull { it.baseUrl == baseUrl }
+
     override val instances: StateFlow<List<InstanceProfile>> = storedState
         .map { state -> state.instances }
         .stateIn(

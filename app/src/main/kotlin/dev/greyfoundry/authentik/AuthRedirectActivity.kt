@@ -3,7 +3,9 @@ package dev.greyfoundry.authentik
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
+import dev.greyfoundry.authentik.auth.AppAuthSessionRepository
 import dev.greyfoundry.authentik.domain.model.InstanceId
+import dev.greyfoundry.authentik.domain.repository.InstanceRepository
 import kotlinx.coroutines.launch
 
 class AuthRedirectActivity : ComponentActivity() {
@@ -19,7 +21,12 @@ class AuthRedirectActivity : ComponentActivity() {
 
         lifecycleScope.launch {
             runCatching {
-                application.authSessionRepository.consumeAuthorizationResponse(instanceId, intent)
+                completeAuthorizationCallback(
+                    authRepository = application.authSessionRepository,
+                    instanceRepository = application.instanceRepository,
+                    instanceId = instanceId,
+                    responseIntent = intent,
+                )
             }
             finish()
         }
@@ -29,4 +36,14 @@ class AuthRedirectActivity : ComponentActivity() {
         const val EXTRA_INSTANCE_ID = "dev.greyfoundry.authentik.extra.INSTANCE_ID"
         const val EXTRA_CANCELLED = "dev.greyfoundry.authentik.extra.CANCELLED"
     }
+}
+
+internal suspend fun completeAuthorizationCallback(
+    authRepository: AppAuthSessionRepository,
+    instanceRepository: InstanceRepository,
+    instanceId: InstanceId,
+    responseIntent: android.content.Intent,
+) {
+    authRepository.consumeAuthorizationResponse(instanceId, responseIntent)
+    instanceRepository.setActive(instanceId)
 }
